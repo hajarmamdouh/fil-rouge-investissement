@@ -1,5 +1,5 @@
 
-# 🌍 Analyse Comparative des Pays — Investissement & Qualité de Vie
+#  Analyse Comparative des Pays — Investissement & Qualité de Vie
 
 **Formation :** Data Analyst - Simplon Maghreb  
 **Étudiante :** Hajar Mamdouh  
