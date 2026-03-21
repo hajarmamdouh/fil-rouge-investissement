@@ -4,7 +4,7 @@
 **Formation :** Data Analyst - Simplon Maghreb  
 **Étudiante :** Hajar Mamdouh  
 **Formateur :** Yassine  
-**Date :** Février 2026
+
 
 ---
 
@@ -14,7 +14,7 @@ Ce projet analyse des données économiques, sociales et de qualité de vie de 1
 
 **Problématique :** Comment exploiter efficacement des données open data pour comparer objectivement les pays et fournir un support décisionnel clair ?
 
----
+
 
 ##  Structure du Projet
 
@@ -45,7 +45,7 @@ projet-fil-rouge/
 └── README.md
 ```
 
----
+
 
 ##  Guide d'Exécution — Étape par Étape
 
@@ -59,7 +59,7 @@ pip install -r requirements.txt
 createdb projet_pays
 ```
 
----
+
 
 ### ÉTAPE 1 — Collecter les données World Bank
 
@@ -70,7 +70,7 @@ python src/01_collecte_worldbank.py
  Crée : `data/raw/worldbank_merged.csv`  
 Contient : PIB/hab, croissance, inflation, population, RNB, chômage, espérance de vie, alphabétisation
 
----
+
 
 ### ÉTAPE 2 — Télécharger le World Happiness Report
 
@@ -88,7 +88,7 @@ python src/02_collecte_happiness.py
  Crée : `data/raw/happiness_all_years.csv`  
 Contient : score bonheur, PIB log, soutien social, espérance de vie, liberté, générosité, corruption
 
----
+
 
 ### ÉTAPE 3 — Nettoyer et fusionner les données
 
@@ -99,15 +99,15 @@ python src/03_nettoyage_fusion.py
  Crée : `data/final/master_dataset.csv`  
 Actions : mapping ISO3, suppression doublons, traitement NaN, calcul score d'attractivité
 
----
+
 
 ### ÉTAPE 4 — Charger dans PostgreSQL
 
 Avant de lancer, modifie `src/04_chargement_postgresql.py` :
 ```python
 DB_CONFIG = {
-    'user':     'ton_user',
-    'password': 'ton_mdp',
+    'user'
+    'password'
     ...
 }
 ```
@@ -121,7 +121,7 @@ python src/04_chargement_postgresql.py
  Tables créées : `dim_pays`, `dim_region`, `dim_annee`, `fact_indicateurs`  
  Vues créées : `v_top_pays_bonheur`, `v_evolution_temporelle`, `v_stats_region`, `v_matrice_pib_bonheur`
 
----
+
 
 ### ÉTAPE 5 — EDA & Analyses Statistiques
 
@@ -136,9 +136,9 @@ jupytext --to notebook notebooks/01_eda_analyse.py
 jupyter notebook notebooks/01_eda_analyse.ipynb
 ```
 
-✅ Génère 8 graphiques dans `reports/plots/`
+ Génère 8 graphiques dans `reports/plots/`
 
----
+
 
 ### ÉTAPE 6 — Clustering & Segmentation
 
@@ -149,7 +149,7 @@ jupyter notebook notebooks/01_eda_analyse.ipynb
  Crée : `data/final/master_with_clusters.csv`  
  Génère 3 graphiques supplémentaires
 
----
+
 
 ### ÉTAPE 7 — Dashboard Power BI
 
@@ -166,7 +166,7 @@ jupyter notebook notebooks/01_eda_analyse.ipynb
 -  Clusters (scatter PCA coloré)
 -  Comparateur de pays (slicers)
 
----
+
 
 ##  Sources de Données
 
@@ -178,7 +178,7 @@ jupyter notebook notebooks/01_eda_analyse.ipynb
 
 **Période :** 2015–2024 | **Volume :** ~150–200 pays
 
----
+
 
 ##  KPI Principaux
 
@@ -195,7 +195,7 @@ jupyter notebook notebooks/01_eda_analyse.ipynb
 | `attractivity_score` | Score composite normalisé (0-1) |
 | `cluster_label` | Groupe K-Means du pays |
 
----
+
 
 ##  Limites du Projet
 
@@ -204,7 +204,7 @@ jupyter notebook notebooks/01_eda_analyse.ipynb
 - Certains pays ont peu de données disponibles
 - Numbeo non intégré par défaut (données payantes)
 
----
+
 
 ##  Livrables
 
