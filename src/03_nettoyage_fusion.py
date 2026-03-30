@@ -4,7 +4,7 @@ PHASE 2 : Nettoyage, préparation & fusion des données
 Ce script crée le dataset maître final en fusionnant :
   - World Bank (indicateurs économiques)
   - World Happiness Report (bien-être, corruption, liberté...)
-  - Numbeo / Cost of Living (optionnel si disponible)
+  
 
 Résultat : data/final/master_dataset.csv
 """
